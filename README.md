@@ -1,6 +1,6 @@
 ## Gitblog
 My personal blog using issues and GitHub Actions 
-[RSS Feed](https://raw.githubusercontent.com/geoqiao/gitblog/master/feed.xml)
+[RSS Feed](https://raw.githubusercontent.com/geoqiao/gitblog/main/feed.xml)
 ## 友情链接
 | Name | Link | Desc | 
  | ---- | ---- | ---- |
