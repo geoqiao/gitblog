@@ -1,7 +1,6 @@
 # [with_sql _as_english](https://github.com/geoqiao/gitblog/issues/5)
 
 
-
 ## 描述
 
 1. 分享自己学习 SQL 的经验。
@@ -13,7 +12,7 @@
 select：选择**哪些字段**
 from：从**哪个表**选择这段
 where：从某个表中符合**哪些条件的数据**进行选择
-left join：excel 中的 vlookup #4 
+left join：就是excel 中的 vlookup #4 
 
 ## 用 excel 思维读 SQL 代码
 
