@@ -1,5 +1,5 @@
 ## Gitblog
-My personal blog using issues and GitHub Actions 
+This is my personal blog, built on GitHub issues and GitHub actions, where I share my musings and learnings related to data analysis. 
 [RSS Feed](https://raw.githubusercontent.com/geoqiao/gitblog/main/feed.xml)
 ## 友情链接
 | Name | Link | Desc | 
