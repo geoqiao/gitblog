@@ -37,7 +37,7 @@
 
 Data Science？没有关系，里面讲的pandas、seaborn、matplotlib真的很好，有兴趣可以看后面的机器学习部分，没兴趣就别看了，在一开始学那么难没有必要。
 
-在这里，老师会手把手教你写代码，每节课都会有课后练习在[github](https://github.com/SuvroBaner/Python-for-Data-Science-and-Machine-Learning-Bootcamp)，一定要去亲自手敲一边，哪怕是一边看答案一边敲。
+在这里，老师会手把手教你写代码，每节课都会有课后练习在[github](https://github.com/SuvroBaner/Python-for-Data-Science-and-Machine-Learning-Bootcamp)，一定要去亲自手敲一遍，哪怕是一边看答案一边敲。
 
 ### 书
 必须是[Python for Data Analysis: Data Wrangling with Pandas, NumPy, and IPython](https://wesmckinney.com/book/)
@@ -66,6 +66,6 @@ Data Science？没有关系，里面讲的pandas、seaborn、matplotlib真的很
 ## 最后
 最好的学习不是一开始就能学会很难的东西，而是从简单的看起，一步一步持续进步。
 
-如果一个人跟小白讲怎么开始自学机器学习，一开口就各种算法怎么牛逼，那我建议尽早结束谈话。他这么讲只有两个原因，要么他很无知在吹牛逼，要么他不是一个很好的老师。
+如果一个人跟小白讲怎么开始自学机器学习，一开口就各种算法怎么牛逼，那我建议尽早结束谈话。他这么讲只有两个可能，要么他很无知在吹牛逼，要么他不是一个很好的老师。
 
-建立自信是极为重要的，武侠小说的主人公，都是都打败恶势力的一个小兵开始的，要是一开始碰见大 boss，那早就完蛋了。
+建立自信是极为重要的，武侠小说的主人公，都是从打败恶势力的一个小兵开始的，要是一开始碰见大 boss，那早就完蛋了。
