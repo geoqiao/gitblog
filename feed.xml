@@ -1,5 +1,36 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/geoqiao/gitblog</id><title>RSS feed of geoqiao's gitblog</title><updated>2023-07-19T13:58:02.089676+00:00</updated><author><name>geoqiao</name><email>realvincentqiao@gmail.com</email></author><link href="https://github.com/geoqiao/gitblog"/><link href="https://raw.githubusercontent.com/geoqiao/gitblog/main/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="0.9.0">python-feedgen</generator><entry><id>https://github.com/geoqiao/gitblog/issues/10</id><title>基于 GitHub issues 的个人 blog 搭建</title><updated>2023-07-19T13:58:02.347391+00:00</updated><content type="html"><![CDATA[<h2>背景</h2>
+<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/geoqiao/gitblog</id><title>RSS feed of geoqiao's gitblog</title><updated>2023-07-29T06:21:05.149334+00:00</updated><author><name>geoqiao</name><email>realvincentqiao@gmail.com</email></author><link href="https://github.com/geoqiao/gitblog"/><link href="https://raw.githubusercontent.com/geoqiao/gitblog/main/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="0.9.0">python-feedgen</generator><entry><id>https://github.com/geoqiao/gitblog/issues/11</id><title>What's on my Mac</title><updated>2023-07-29T06:21:05.387469+00:00</updated><content type="html"><![CDATA[<p>和大多数人一样，拿到一台MacBook第一件事就是找各种软件，以下是我目前在用的一些。它们的整体使用体验都很不错，且部分软件可以联动形成 workflow ，供大家参考。</p>
+<h2>启动器类- Raycast</h2>
+<p>目前免费的启动器类app，可以启动、替代很多软件。自带的窗口管理功能替代 magnet、rectangle 等等窗口管理软件；自带的文件搜索功能替代了访达；还有一系列提升工作效率的插件。不了解的人可以<a href="https://telegra.ph/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E7%94%A8raycast%E6%9B%BF%E4%BB%A3%E4%BA%86alfred-07-17">参考这里</a>。</p>
+<h2>自动切换输入法- Input Source Pro</h2>
+<p>自动切换输入法。给不同 app、网站设置不同输入法。属于平时特别没有存在感，但一旦某天出 bug 就会想砸电脑的那种 app。</p>
+<h2>截图-Shottr</h2>
+<p>截图软件，小巧、免费、功能俱全。长截图、OCR、顺序标注，除了贴图，其他功能几乎都有，而且体验很棒。</p>
+<h2>解压缩-Keka</h2>
+<p>免费好用的解压缩软件。</p>
+<h2>鼠标体验-Mac Mouse Fix</h2>
+<p>开源、免费、改善Mac鼠标滚动体验。Mos同样好用，但是似乎最新版本与 Shottr 长截图有冲突，故放弃。</p>
+<h2>刘海管理-Bartender4</h2>
+<p>刘海屏永远的痛，同类免费软件总是不如预期，故 618 打折入手正版Bartender。</p>
+<h2>RSS源-RSSHub Radar</h2>
+<p>一款可以发现当前网页Rss订阅的浏览器扩展，支持 Safari、Chrome。</p>
+<h2>RSS阅读- Netnewswire</h2>
+<p>开源免费的 RSS 阅读器，我用它替代了 reeder4。主要原因是他支持macOS原生的翻译功能，选词右键就可以，reeder4不行。</p>
+<h2>文档日记写作- Typora + Obsidian</h2>
+<p>markdown 编辑器。Typora 编辑体验好，Obsidian 管理文件好用。简单设置一下可以同步图片。</p>
+<h2>GTD - Itsycal 、reminder</h2>
+<p>Itsycal 是一款日历插件，可以在状态栏点击直接添加日程，和原生 Calendar 同步。有预定日期的会议、比较确定的日程通过 Itsycal 记录在日历里面，日期不确定的待办事项记在 Reminder。焦虑感和慌张感会少很多。</p>
+<h2>浏览器插件</h2>
+<p>常用的Chrome插件</p>
+<p>屏蔽广告：uBlock Origin</p>
+<p>多端、多浏览器密码同步：Bitwarden</p>
+<p>rss源：RSSHub Radar</p>
+<p>Trancy：YouTube神器、英语学习神器（YouTube有很多公开课，比如CS50P等等）</p>
+<h1>其他</h1>
+<p>微信、telegram、VSCode、Chrome。。。</p>
+<p>office 被我卸载了，因为想学 pandas，强迫自己用 pandas 读表</p>
+<p>Report content on this page</p>
+]]></content><link href="https://github.com/geoqiao/gitblog/issues/11" rel="alternate"/><published>2023-07-29T06:20:29+00:00</published></entry><entry><id>https://github.com/geoqiao/gitblog/issues/10</id><title>基于 GitHub issues 的个人 blog 搭建</title><updated>2023-07-29T06:21:05.510779+00:00</updated><content type="html"><![CDATA[<h2>背景</h2>
 <p>我最近碰到了以下问题：</p>
 <ol>
 <li>偶尔想写点东西，想有一个个人 blog</li>
@@ -25,7 +56,7 @@
 <img width="1490" alt="action读写权限开启" src="https://github.com/geoqiao/gitblog/assets/105639506/c8efcada-36d7-42f9-aed6-30b78ce3873e">
 <h2>结语</h2>
 <p>以上就是全部内容，非常感谢 @yihong0618 老师的代码。</p>
-]]></content><link href="https://github.com/geoqiao/gitblog/issues/10" rel="alternate"/><category term="Top"/><published>2023-07-18T13:10:40+00:00</published></entry><entry><id>https://github.com/geoqiao/gitblog/issues/9</id><title>总得活着吧？</title><updated>2023-07-19T13:58:02.509830+00:00</updated><content type="html"><![CDATA[<p>世俗价值都是禁不起推敲的，推敲下去觉得活着没意义。  </p>
+]]></content><link href="https://github.com/geoqiao/gitblog/issues/10" rel="alternate"/><category term="Top"/><published>2023-07-18T13:10:40+00:00</published></entry><entry><id>https://github.com/geoqiao/gitblog/issues/9</id><title>总得活着吧？</title><updated>2023-07-29T06:21:05.628090+00:00</updated><content type="html"><![CDATA[<p>世俗价值都是禁不起推敲的，推敲下去觉得活着没意义。  </p>
 <p>你越想意义就越痛苦。所以人们只能有两个选择，肉体自杀和哲学自杀。</p>
 <h2>哲学自杀</h2>
 <p>哲学自杀就是不再想这个问题了，老子选择信仰个宗教，伊斯兰或者马克思，或者世俗主义，或者纯粹享乐比谁啪的多，比谁赚得多…总之信个世俗价值的东西。你可以随便吃饭时候问一下同桌人，生活的意义是啥，别人不是笑你就是说想这干嘛，但他们是无法给出答案的。这就是所谓哲学自杀。人如果不愿放弃，继续思考，结果必然面对找不到意义的尴尬，也就是加缪的名词‘荒谬’，很可能走向虚无。</p>
@@ -38,7 +69,7 @@
 <h2>知其不可为而为之</h2>
 <p>就比如，生活给了你一巴掌，让你去死；你不仅不能听它的，还得回它一巴掌，再加一句：操！生命的意义就在这句粗口里。</p>
 <p>知道人终有一死，但现在，我选择活。</p>
-]]></content><link href="https://github.com/geoqiao/gitblog/issues/9" rel="alternate"/><category term="#胡思乱想"/><published>2023-07-15T14:40:01+00:00</published></entry><entry><id>https://github.com/geoqiao/gitblog/issues/8</id><title>Out of the depth of misfortune comes bliss</title><updated>2023-07-19T13:58:02.648655+00:00</updated><content type="html"><![CDATA[<p>大方无隅</p>
+]]></content><link href="https://github.com/geoqiao/gitblog/issues/9" rel="alternate"/><category term="#胡思乱想"/><published>2023-07-15T14:40:01+00:00</published></entry><entry><id>https://github.com/geoqiao/gitblog/issues/8</id><title>Out of the depth of misfortune comes bliss</title><updated>2023-07-29T06:21:05.740956+00:00</updated><content type="html"><![CDATA[<p>大方无隅</p>
 <p>大器晚成</p>
 <p>大音希声</p>
 <p>大象无形</p>
@@ -57,7 +88,7 @@
 <p>否极泰来</p>
 <p>否极泰来</p>
 <p>否极泰来</p>
-]]></content><link href="https://github.com/geoqiao/gitblog/issues/8" rel="alternate"/><category term="#胡思乱想"/><published>2023-07-15T03:34:29+00:00</published></entry><entry><id>https://github.com/geoqiao/gitblog/issues/7</id><title>空调剥削理论的提出</title><updated>2023-07-19T13:58:02.772548+00:00</updated><content type="html"><![CDATA[<h2>两大基本原理</h2>
+]]></content><link href="https://github.com/geoqiao/gitblog/issues/8" rel="alternate"/><category term="#胡思乱想"/><published>2023-07-15T03:34:29+00:00</published></entry><entry><id>https://github.com/geoqiao/gitblog/issues/7</id><title>空调剥削理论的提出</title><updated>2023-07-29T06:21:05.863950+00:00</updated><content type="html"><![CDATA[<h2>两大基本原理</h2>
 <p><strong>首先</strong>，在开始阐述空调剥削理论之前，先来了解一下这个理论成立的两大基本原理：</p>
 <p><strong>空调制冷原理</strong>和<strong>能量守恒</strong></p>
 <h3>空调制冷原理</h3>
@@ -90,10 +121,10 @@
 <h2>这个理论有两层含义：</h2>
 <p><strong>第一层是，技术的进步没能克服43摄氏度的气温，空调没用了。也就是空调作为一个没有生命，没有意识的机器，剥削了包括人类在内的地球全体。</strong></p>
 <p><strong>第二层是，技术的进步克服了43摄氏度的气温，空调依然有作用，但使用成本大大增加。即能够使用空调的少数人类剥削包括用不上空调的其余人类在内的地球全体。</strong></p>
-]]></content><link href="https://github.com/geoqiao/gitblog/issues/7" rel="alternate"/><category term="#胡思乱想"/><category term="#热"/><published>2023-07-15T03:25:05+00:00</published></entry><entry><id>https://github.com/geoqiao/gitblog/issues/6</id><title>关于历史</title><updated>2023-07-19T13:58:02.904908+00:00</updated><content type="html"><![CDATA[<p>吃饭的时候突然想到，把历史比喻成一个车轮真的是生动形象且具体。</p>
+]]></content><link href="https://github.com/geoqiao/gitblog/issues/7" rel="alternate"/><category term="#胡思乱想"/><category term="#热"/><published>2023-07-15T03:25:05+00:00</published></entry><entry><id>https://github.com/geoqiao/gitblog/issues/6</id><title>关于历史</title><updated>2023-07-29T06:21:05.984738+00:00</updated><content type="html"><![CDATA[<p>吃饭的时候突然想到，把历史比喻成一个车轮真的是生动形象且具体。</p>
 <p>在某种角度上来看，这个车轮一直在向前滚动；另一种种角度上，车轮又在不断循环，车轮的材质变化，滚动的速度也不一样。</p>
 <p>一些东西一直再改变，但一些东西一直没变。</p>
-]]></content><link href="https://github.com/geoqiao/gitblog/issues/6" rel="alternate"/><category term="#胡思乱想"/><published>2023-07-15T03:17:05+00:00</published></entry><entry><id>https://github.com/geoqiao/gitblog/issues/5</id><title>with_sql _as_english</title><updated>2023-07-19T13:58:03.078206+00:00</updated><content type="html"><![CDATA[<h2>描述</h2>
+]]></content><link href="https://github.com/geoqiao/gitblog/issues/6" rel="alternate"/><category term="#胡思乱想"/><published>2023-07-15T03:17:05+00:00</published></entry><entry><id>https://github.com/geoqiao/gitblog/issues/5</id><title>with_sql _as_english</title><updated>2023-07-29T06:21:06.092798+00:00</updated><content type="html"><![CDATA[<h2>描述</h2>
 <ol>
 <li>分享自己学习 SQL 的经验。</li>
 <li><code>WITH 临时表名 AS 子查询</code> 是 SQL 中一个常用的语法，这篇分享会介绍这个语法。</li>
@@ -115,7 +146,7 @@ ON table1.id = table2.id
 WHERE table1.column1 = &#x27;1&#x27;
 </code></pre>
 <p>在这个示例中，<code>table1</code>  和  <code>table2</code>  是两个不同的表，我们在 <code>table1</code> 中写了一个 <code>vlookup</code> ，这个公式以两张表中的 <code>id</code> 字段为条件关联，把 <code>table2</code>  中的 <code>name</code> 字段匹配到了 <code>table1</code> ，并且匹配完成后进行了一个筛选，只选择 <code>table1</code> 中 <code>column1</code> 字段为 <code>&#x27;1&#x27;</code> 的行。</p>
-]]></content><link href="https://github.com/geoqiao/gitblog/issues/5" rel="alternate"/><category term="#数据分析"/><category term="#SQL"/><published>2023-07-15T03:09:11+00:00</published></entry><entry><id>https://github.com/geoqiao/gitblog/issues/4</id><title>excel 学习经验分享</title><updated>2023-07-19T13:58:03.226114+00:00</updated><content type="html"><![CDATA[<h2>描述</h2>
+]]></content><link href="https://github.com/geoqiao/gitblog/issues/5" rel="alternate"/><category term="#数据分析"/><category term="#SQL"/><published>2023-07-15T03:09:11+00:00</published></entry><entry><id>https://github.com/geoqiao/gitblog/issues/4</id><title>excel 学习经验分享</title><updated>2023-07-29T06:21:06.197843+00:00</updated><content type="html"><![CDATA[<h2>描述</h2>
 <ol>
 <li>
 <p>这是一个分享个人 excel 经验的文档。</p>

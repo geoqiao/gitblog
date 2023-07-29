@@ -7,11 +7,11 @@ This is my personal blog, built on GitHub issues and GitHub actions, where I sha
 ## 置顶文章
 - [基于 GitHub issues 的个人 blog 搭建](https://github.com/geoqiao/gitblog/issues/10)--2023-07-18
 ## 最近更新
+- [What's on my Mac](https://github.com/geoqiao/gitblog/issues/11)--2023-07-29
 - [基于 GitHub issues 的个人 blog 搭建](https://github.com/geoqiao/gitblog/issues/10)--2023-07-18
 - [总得活着吧？](https://github.com/geoqiao/gitblog/issues/9)--2023-07-15
 - [Out of the depth of misfortune comes bliss](https://github.com/geoqiao/gitblog/issues/8)--2023-07-15
 - [空调剥削理论的提出](https://github.com/geoqiao/gitblog/issues/7)--2023-07-15
-- [关于历史](https://github.com/geoqiao/gitblog/issues/6)--2023-07-15
 ## #SQL
 - [with_sql _as_english](https://github.com/geoqiao/gitblog/issues/5)--2023-07-15
 ## #excel
