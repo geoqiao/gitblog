@@ -1,5 +1,41 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/geoqiao/gitblog</id><title>RSS feed of geoqiao's gitblog</title><updated>2023-07-29T12:50:49.471076+00:00</updated><author><name>geoqiao</name><email>realvincentqiao@gmail.com</email></author><link href="https://github.com/geoqiao/gitblog"/><link href="https://raw.githubusercontent.com/geoqiao/gitblog/main/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="0.9.0">python-feedgen</generator><entry><id>https://github.com/geoqiao/gitblog/issues/13</id><title>From English Import Python</title><updated>2023-07-29T12:50:49.680454+00:00</updated><content type="html"><![CDATA[<h2>关于我</h2>
+<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/geoqiao/gitblog</id><title>RSS feed of geoqiao's gitblog</title><updated>2023-07-30T11:10:12.999393+00:00</updated><author><name>geoqiao</name><email>realvincentqiao@gmail.com</email></author><link href="https://github.com/geoqiao/gitblog"/><link href="https://raw.githubusercontent.com/geoqiao/gitblog/main/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="0.9.0">python-feedgen</generator><entry><id>https://github.com/geoqiao/gitblog/issues/14</id><title>Python环境安装-Anaconda为例</title><updated>2023-07-30T11:10:13.251657+00:00</updated><content type="html"><![CDATA[<p>学习 Python 第一步就是需要安装一个 Python 环境，这可劝退了大部分人。</p>
+<h2>安装 Python 环境的几种传统方式</h2>
+<ol>
+<li>系统自带，直接用系统的。比如 macOS 一般自带 Python3。</li>
+<li>终端使用 Homebrew 类似的包管理工具安装。安装后自己修改路径，安装需要使用的 Python 库。一般成功后终端输入<code>python3</code>就可以成功进入 Python 环境了。</li>
+<li><a href="https://www.python.org/">Python 官网</a>最直接的方式，甚至官网也有详细的安装教程。</li>
+</ol>
+<p>以上几种方式，对于已有编程经验或者计算机基础知识的人来说，完全可以，可操作空间极大，完全可以自定义一个个性化的 Python 环境。</p>
+<p>但是对于刚入门的小白，我以重装系统的惨痛教训建议：不要使用以上的方法安装 Python！</p>
+<h3>为什么不推荐？</h3>
+<p>因为终端操作有一定门槛，新手第一次安装遇到报错很容易直接劝退；就算折腾一番安装好了，后续各种后续看不懂的终端命令也够折磨人的了。</p>
+<blockquote>
+<p>人的焦虑和恐惧来自于没有安全感，安全感来自于对工具的掌控程度</p>
+</blockquote>
+<p>我也不知道我怎么就安装了好几个版本的 Python，Google 搜如何解决，随便在某 code 网站复制了一个命令，然后，电脑就什么都没了，重装系统都进行不下去，最后只能求助于天才吧。</p>
+<h2>新手友好的 Python 环境安装-Anaconda</h2>
+<p>作为 95 后，小时候没少玩 DNF、穿越火线、英雄联盟。那时候还不像现在网速这么快，每次更新加载都很慢，每次等待都想踹主机。但我家里穷，只敢心里想想不敢真的踹。那每次大更新我都直接卸载重装。</p>
+<p>对于安装游戏、卸载游戏我相当在行，想安装在 D 盘，绝不会让游戏安装到 C 盘。</p>
+<h3>为什么讲到这个呢？</h3>
+<p>因为<strong>安装 Anaconda 的过程</strong>，就像给电脑安装游戏一样简单。</p>
+<ol>
+<li>找到<a href="https://www.anaconda.com/">Anaconda 官网</a></li>
+<li>下载安装包</li>
+<li>安装安装包（就是屏幕上弹出一个框框，就是需要一直点下一步的那个熟悉的框框</li>
+<li>选择喜欢的编辑器，新建<code>.ipynb</code>文件，kernel 选择前面带 base 的就行</li>
+<li>大部分库基本都有，比如 pandas、numpy 等等，不需要二次手动安装</li>
+</ol>
+<h2>用什么编辑器呢？</h2>
+<p>说实话很多编辑器都很好用，但我们的原则是必须简单、免费。</p>
+<p>那就有两个选择：</p>
+<p>一个是 jupyter notebook ，很适合新手。写一行、运行一行，非常好入门。</p>
+<p>另一个是 VSCode，可以安装 jupyter notebook 插件，以及 Python 的语法高亮插件。我个人感觉要比纯粹的 jupyter notebook 功能更强大，使用体验也更好。</p>
+<p>我自己是在用 VSCode，因为 VSCode 创建文件夹、管理文件夹的方式跟在资源管理器/访达里面创建删除的体验没啥区别，非常直觉。</p>
+<h2>总结</h2>
+<p>以上就是全部内容，其实跟标题相关的就四五行。具体安装教程没有写，是因为真的和小时候下载安装游戏的流程一模一样。</p>
+<p>如果过程中碰到什么问题，可以及时 Google 搜索。当然，如果你愿意的话，可以直接在这个 issue 下面评论，我会尽快回复的。</p>
+]]></content><link href="https://github.com/geoqiao/gitblog/issues/14" rel="alternate"/><category term="Python"/><published>2023-07-30T11:09:46+00:00</published></entry><entry><id>https://github.com/geoqiao/gitblog/issues/13</id><title>From English Import Python</title><updated>2023-07-30T11:10:13.359779+00:00</updated><content type="html"><![CDATA[<h2>关于我</h2>
 <p>我是一个很普通的人，大学在普通二本商科专业。</p>
 <p>刚毕业的时候vlookup都不会，到熟练excel；后来因为公司数据中台做的特别烂，自己学了SQL，从杂乱的底表自己捞数，最后自己一个人维护整条业务线的数据库视图层（当然工资没有涨，只是事情变多了）</p>
 <p>在跳槽做策略分析后，发现日常工作仍然有好多东西并不是能从数据库来的，SQL 和 Tableau 并不能解决全部问题。</p>
@@ -39,7 +75,7 @@
 <p>最好的学习不是一开始就能学会很难的东西，而是从简单的看起，一步一步持续进步。</p>
 <p>如果一个人跟小白讲怎么开始自学机器学习，一开口就各种算法怎么牛逼，那我建议尽早结束谈话。他这么讲只有两个可能，要么他很无知在吹牛逼，要么他不是一个很好的老师。</p>
 <p>建立自信是极为重要的，武侠小说的主人公，都是从打败恶势力的一个小兵开始的，要是一开始碰见大 boss，那早就完蛋了。</p>
-]]></content><link href="https://github.com/geoqiao/gitblog/issues/13" rel="alternate"/><category term="Python"/><category term="Data analysis"/><published>2023-07-29T09:58:20+00:00</published></entry><entry><id>https://github.com/geoqiao/gitblog/issues/12</id><title>Shottr- 原生、轻巧且功能强大的免费macOS截图工具</title><updated>2023-07-29T12:50:49.771925+00:00</updated><content type="html"><![CDATA[<p>| <a href="https://shottr.cc/">Shottr官网</a></p>
+]]></content><link href="https://github.com/geoqiao/gitblog/issues/13" rel="alternate"/><category term="Python"/><category term="Data analysis"/><published>2023-07-29T09:58:20+00:00</published></entry><entry><id>https://github.com/geoqiao/gitblog/issues/12</id><title>Shottr- 原生、轻巧且功能强大的免费macOS截图工具</title><updated>2023-07-30T11:10:13.465167+00:00</updated><content type="html"><![CDATA[<p>| <a href="https://shottr.cc/">Shottr官网</a></p>
 <ul>
 <li>
 <p><strong>截图</strong>：不得不说，作为截图工具的基础功能，shottr并没有特别出彩的地方，UI也谈不上漂亮。但是基础的区域截图、顺序标记都有，操作起来也非常直觉。而且在其他同类app中要付费的滚动截图功能也是免费的。</p>
@@ -56,7 +92,7 @@
 </ul>
 <p>-<strong>贴图</strong>。就是把图片钉在屏幕最上层</p>
 <p>整体体验下来，我认为 shottr非常适合经常需要<strong>对截图进行简单编辑</strong>或者经常使用<strong>OCR功能</strong>的朋友，shottr 能轻松满足你的需求。而且，向开发者邮件反馈issue，开发者回复都非常积极。</p>
-]]></content><link href="https://github.com/geoqiao/gitblog/issues/12" rel="alternate"/><published>2023-07-29T06:28:23+00:00</published></entry><entry><id>https://github.com/geoqiao/gitblog/issues/11</id><title>What's on my Mac</title><updated>2023-07-29T12:50:49.851031+00:00</updated><content type="html"><![CDATA[<p>和大多数人一样，拿到一台MacBook第一件事就是找各种软件，以下是我目前在用的一些。它们的整体使用体验都很不错，且部分软件可以联动形成 workflow ，供大家参考。</p>
+]]></content><link href="https://github.com/geoqiao/gitblog/issues/12" rel="alternate"/><published>2023-07-29T06:28:23+00:00</published></entry><entry><id>https://github.com/geoqiao/gitblog/issues/11</id><title>What's on my Mac</title><updated>2023-07-30T11:10:13.543433+00:00</updated><content type="html"><![CDATA[<p>和大多数人一样，拿到一台MacBook第一件事就是找各种软件，以下是我目前在用的一些。它们的整体使用体验都很不错，且部分软件可以联动形成 workflow ，供大家参考。</p>
 <h2>启动器类- Raycast</h2>
 <p>目前免费的启动器类app，可以启动、替代很多软件。自带的窗口管理功能替代 magnet、rectangle 等等窗口管理软件；自带的文件搜索功能替代了访达；还有一系列提升工作效率的插件。不了解的人可以<a href="https://telegra.ph/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E7%94%A8raycast%E6%9B%BF%E4%BB%A3%E4%BA%86alfred-07-17">参考这里</a>。</p>
 <h2>自动切换输入法- Input Source Pro</h2>
@@ -87,7 +123,7 @@
 <p>微信、telegram、VSCode、Chrome。。。</p>
 <p>office 被我卸载了，因为想学 pandas，强迫自己用 pandas 读表</p>
 <p>Report content on this page</p>
-]]></content><link href="https://github.com/geoqiao/gitblog/issues/11" rel="alternate"/><published>2023-07-29T06:20:29+00:00</published></entry><entry><id>https://github.com/geoqiao/gitblog/issues/10</id><title>基于 GitHub issues 的个人 blog 搭建</title><updated>2023-07-29T12:50:49.940706+00:00</updated><content type="html"><![CDATA[<h2>背景</h2>
+]]></content><link href="https://github.com/geoqiao/gitblog/issues/11" rel="alternate"/><published>2023-07-29T06:20:29+00:00</published></entry><entry><id>https://github.com/geoqiao/gitblog/issues/10</id><title>基于 GitHub issues 的个人 blog 搭建</title><updated>2023-07-30T11:10:13.625027+00:00</updated><content type="html"><![CDATA[<h2>背景</h2>
 <p>我最近碰到了以下问题：</p>
 <ol>
 <li>偶尔想写点东西，想有一个个人 blog</li>
@@ -113,7 +149,7 @@
 <img width="1490" alt="action读写权限开启" src="https://github.com/geoqiao/gitblog/assets/105639506/c8efcada-36d7-42f9-aed6-30b78ce3873e">
 <h2>结语</h2>
 <p>以上就是全部内容，非常感谢 @yihong0618 老师的代码。</p>
-]]></content><link href="https://github.com/geoqiao/gitblog/issues/10" rel="alternate"/><category term="Top"/><published>2023-07-18T13:10:40+00:00</published></entry><entry><id>https://github.com/geoqiao/gitblog/issues/9</id><title>总得活着吧？</title><updated>2023-07-29T12:50:50.028864+00:00</updated><content type="html"><![CDATA[<p>世俗价值都是禁不起推敲的，推敲下去觉得活着没意义。  </p>
+]]></content><link href="https://github.com/geoqiao/gitblog/issues/10" rel="alternate"/><category term="Top"/><published>2023-07-18T13:10:40+00:00</published></entry><entry><id>https://github.com/geoqiao/gitblog/issues/9</id><title>总得活着吧？</title><updated>2023-07-30T11:10:13.713050+00:00</updated><content type="html"><![CDATA[<p>世俗价值都是禁不起推敲的，推敲下去觉得活着没意义。  </p>
 <p>你越想意义就越痛苦。所以人们只能有两个选择，肉体自杀和哲学自杀。</p>
 <h2>哲学自杀</h2>
 <p>哲学自杀就是不再想这个问题了，老子选择信仰个宗教，伊斯兰或者马克思，或者世俗主义，或者纯粹享乐比谁啪的多，比谁赚得多…总之信个世俗价值的东西。你可以随便吃饭时候问一下同桌人，生活的意义是啥，别人不是笑你就是说想这干嘛，但他们是无法给出答案的。这就是所谓哲学自杀。人如果不愿放弃，继续思考，结果必然面对找不到意义的尴尬，也就是加缪的名词‘荒谬’，很可能走向虚无。</p>
@@ -126,7 +162,7 @@
 <h2>知其不可为而为之</h2>
 <p>就比如，生活给了你一巴掌，让你去死；你不仅不能听它的，还得回它一巴掌，再加一句：操！生命的意义就在这句粗口里。</p>
 <p>知道人终有一死，但现在，我选择活。</p>
-]]></content><link href="https://github.com/geoqiao/gitblog/issues/9" rel="alternate"/><category term="胡思乱想"/><published>2023-07-15T14:40:01+00:00</published></entry><entry><id>https://github.com/geoqiao/gitblog/issues/8</id><title>Out of the depth of misfortune comes bliss</title><updated>2023-07-29T12:50:50.116720+00:00</updated><content type="html"><![CDATA[<p>大方无隅</p>
+]]></content><link href="https://github.com/geoqiao/gitblog/issues/9" rel="alternate"/><category term="胡思乱想"/><published>2023-07-15T14:40:01+00:00</published></entry><entry><id>https://github.com/geoqiao/gitblog/issues/8</id><title>Out of the depth of misfortune comes bliss</title><updated>2023-07-30T11:10:13.795654+00:00</updated><content type="html"><![CDATA[<p>大方无隅</p>
 <p>大器晚成</p>
 <p>大音希声</p>
 <p>大象无形</p>
@@ -145,7 +181,7 @@
 <p>否极泰来</p>
 <p>否极泰来</p>
 <p>否极泰来</p>
-]]></content><link href="https://github.com/geoqiao/gitblog/issues/8" rel="alternate"/><category term="胡思乱想"/><published>2023-07-15T03:34:29+00:00</published></entry><entry><id>https://github.com/geoqiao/gitblog/issues/7</id><title>空调剥削理论的提出</title><updated>2023-07-29T12:50:50.217911+00:00</updated><content type="html"><![CDATA[<h2>两大基本原理</h2>
+]]></content><link href="https://github.com/geoqiao/gitblog/issues/8" rel="alternate"/><category term="胡思乱想"/><published>2023-07-15T03:34:29+00:00</published></entry><entry><id>https://github.com/geoqiao/gitblog/issues/7</id><title>空调剥削理论的提出</title><updated>2023-07-30T11:10:13.883095+00:00</updated><content type="html"><![CDATA[<h2>两大基本原理</h2>
 <p><strong>首先</strong>，在开始阐述空调剥削理论之前，先来了解一下这个理论成立的两大基本原理：</p>
 <p><strong>空调制冷原理</strong>和<strong>能量守恒</strong></p>
 <h3>空调制冷原理</h3>
@@ -178,10 +214,10 @@
 <h2>这个理论有两层含义：</h2>
 <p><strong>第一层是，技术的进步没能克服43摄氏度的气温，空调没用了。也就是空调作为一个没有生命，没有意识的机器，剥削了包括人类在内的地球全体。</strong></p>
 <p><strong>第二层是，技术的进步克服了43摄氏度的气温，空调依然有作用，但使用成本大大增加。即能够使用空调的少数人类剥削包括用不上空调的其余人类在内的地球全体。</strong></p>
-]]></content><link href="https://github.com/geoqiao/gitblog/issues/7" rel="alternate"/><category term="胡思乱想"/><category term="热"/><published>2023-07-15T03:25:05+00:00</published></entry><entry><id>https://github.com/geoqiao/gitblog/issues/6</id><title>关于历史</title><updated>2023-07-29T12:50:50.295278+00:00</updated><content type="html"><![CDATA[<p>吃饭的时候突然想到，把历史比喻成一个车轮真的是生动形象且具体。</p>
+]]></content><link href="https://github.com/geoqiao/gitblog/issues/7" rel="alternate"/><category term="胡思乱想"/><category term="热"/><published>2023-07-15T03:25:05+00:00</published></entry><entry><id>https://github.com/geoqiao/gitblog/issues/6</id><title>关于历史</title><updated>2023-07-30T11:10:13.968160+00:00</updated><content type="html"><![CDATA[<p>吃饭的时候突然想到，把历史比喻成一个车轮真的是生动形象且具体。</p>
 <p>在某种角度上来看，这个车轮一直在向前滚动；另一种种角度上，车轮又在不断循环，车轮的材质变化，滚动的速度也不一样。</p>
 <p>一些东西一直再改变，但一些东西一直没变。</p>
-]]></content><link href="https://github.com/geoqiao/gitblog/issues/6" rel="alternate"/><category term="胡思乱想"/><published>2023-07-15T03:17:05+00:00</published></entry><entry><id>https://github.com/geoqiao/gitblog/issues/5</id><title>with_sql _as_english</title><updated>2023-07-29T12:50:50.383736+00:00</updated><content type="html"><![CDATA[<h2>描述</h2>
+]]></content><link href="https://github.com/geoqiao/gitblog/issues/6" rel="alternate"/><category term="胡思乱想"/><published>2023-07-15T03:17:05+00:00</published></entry><entry><id>https://github.com/geoqiao/gitblog/issues/5</id><title>with_sql _as_english</title><updated>2023-07-30T11:10:14.063075+00:00</updated><content type="html"><![CDATA[<h2>描述</h2>
 <ol>
 <li>分享自己学习 SQL 的经验。</li>
 <li><code>WITH 临时表名 AS 子查询</code> 是 SQL 中一个常用的语法，这篇分享会介绍这个语法。</li>
@@ -203,7 +239,7 @@ ON table1.id = table2.id
 WHERE table1.column1 = &#x27;1&#x27;
 </code></pre>
 <p>在这个示例中，<code>table1</code>  和  <code>table2</code>  是两个不同的表，我们在 <code>table1</code> 中写了一个 <code>vlookup</code> ，这个公式以两张表中的 <code>id</code> 字段为条件关联，把 <code>table2</code>  中的 <code>name</code> 字段匹配到了 <code>table1</code> ，并且匹配完成后进行了一个筛选，只选择 <code>table1</code> 中 <code>column1</code> 字段为 <code>&#x27;1&#x27;</code> 的行。</p>
-]]></content><link href="https://github.com/geoqiao/gitblog/issues/5" rel="alternate"/><category term="Data analysis"/><category term="SQL"/><published>2023-07-15T03:09:11+00:00</published></entry><entry><id>https://github.com/geoqiao/gitblog/issues/4</id><title>excel 学习经验分享</title><updated>2023-07-29T12:50:50.496436+00:00</updated><content type="html"><![CDATA[<h2>描述</h2>
+]]></content><link href="https://github.com/geoqiao/gitblog/issues/5" rel="alternate"/><category term="Data analysis"/><category term="SQL"/><published>2023-07-15T03:09:11+00:00</published></entry><entry><id>https://github.com/geoqiao/gitblog/issues/4</id><title>excel 学习经验分享</title><updated>2023-07-30T11:10:14.156039+00:00</updated><content type="html"><![CDATA[<h2>描述</h2>
 <ol>
 <li>
 <p>这是一个分享个人 excel 经验的文档。</p>
