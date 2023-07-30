@@ -5,6 +5,8 @@ This is my personal blog, built on GitHub issues and GitHub actions, where I sha
 | Name | Link | Desc | 
  | ---- | ---- | ---- |
 ## 置顶文章
+- [Python环境安装-Anaconda为例](https://github.com/geoqiao/gitblog/issues/14)--2023-07-30
+- [From English Import Python](https://github.com/geoqiao/gitblog/issues/13)--2023-07-29
 - [基于 GitHub issues 的个人 blog 搭建](https://github.com/geoqiao/gitblog/issues/10)--2023-07-18
 ## 最近更新
 - [Python环境安装-Anaconda为例](https://github.com/geoqiao/gitblog/issues/14)--2023-07-30
