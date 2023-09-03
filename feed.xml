@@ -1,5 +1,85 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/geoqiao/gitblog</id><title>RSS feed of geoqiao's gitblog</title><updated>2023-08-31T13:48:20.055408+00:00</updated><author><name>geoqiao</name><email>realvincentqiao@gmail.com</email></author><link href="https://github.com/geoqiao/gitblog"/><link href="https://raw.githubusercontent.com/geoqiao/gitblog/main/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="0.9.0">python-feedgen</generator><entry><id>https://github.com/geoqiao/gitblog/issues/16</id><title>我的第一个完整的机器学习项目-Titanic总结</title><updated>2023-08-31T13:48:20.317914+00:00</updated><content type="html"><![CDATA[<h2>背景</h2>
+<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/geoqiao/gitblog</id><title>RSS feed of geoqiao's gitblog</title><updated>2023-09-03T13:02:51.647786+00:00</updated><author><name>geoqiao</name><email>realvincentqiao@gmail.com</email></author><link href="https://github.com/geoqiao/gitblog"/><link href="https://raw.githubusercontent.com/geoqiao/gitblog/main/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="0.9.0">python-feedgen</generator><entry><id>https://github.com/geoqiao/gitblog/issues/17</id><title>Coke Machine Challenge </title><updated>2023-09-03T13:02:51.889384+00:00</updated><content type="html"><![CDATA[<h2>什么是 Coke Machine</h2>
+<p>Coke Machine 是<a href="https://cs50.harvard.edu/python/2022/">CS50P</a>课程中 loop 章节的其中一个课后练习，这个课后练习需要使用 Python 语言中的 loop 语法实现一个可乐售卖机，具体要求如下：</p>
+<blockquote>
+<p>Suppose that a machine sells bottles of Coca-Cola (Coke) for 50 cents and only accepts coins in these denominations: 25 cents, 10 cents, and 5 cents.</p>
+<p>In a file called <code>coke.py</code>, implement a program that prompts the user to insert a coin, one at a time, each time informing the user of the amount due. Once the user has inputted at least 50 cents, output how many cents in change the user is owed. Assume that the user will only input integers, and ignore any integer that isn’t an accepted denomination.</p>
+</blockquote>
+<p>实际上，这是一个很简单的实现，但是我在这里被困了 2 个小时，这里重新记录一遍过程，当作<strong>错题集</strong>。</p>
+<h2>任务拆解</h2>
+<ol>
+<li>假设输入只有 25、10、5 几种情况，且只输入整数格式，忽略任何不符合要求的数字</li>
+<li>文件名为 coke.py</li>
+<li>提示用户投入一枚硬币，每次都要通知应付金额</li>
+<li>一旦用户投入的金额大于等于 50，输出找零金额</li>
+</ol>
+<h2>代码实现</h2>
+<h3>初始化</h3>
+<p>可乐需要 50 美分；一开始没有任何硬币投入；投入的硬币只有三种情况；提示用户可乐的价格。</p>
+<p>代码如下：</p>
+<pre><code class="language-python">amount_due = 50
+change = 0
+coin_list = [5,10,25]
+print(f&quot;Amount Due: {amount_due}&quot;) # 告诉客户coke价格
+</code></pre>
+<h3>付费环节</h3>
+<p>由于条件限制，用户无法一次投入 50 美分，需要多次投入（循环），每次都要提醒用户还要投多少钱。</p>
+<pre><code class="language-python">while amount_due &gt; 0: # 循环开始的条件，如果用户还需要投的钱大于0，则说明钱还不够
+	coin = input(&quot;Insert a coin (25, 10, or 5): &quot;)
+	# 这里用try 语句来避免用户输入一些无法转换为整数的文本内容
+	try:
+		coin = int(coin)
+	except ValueError:
+		print(&quot;Invalid coin&quot;)
+		continue
+	# if语句用来判断用户投入的硬币是否符合要求
+	if coin in coin_list:
+		amount_due -= coin # 总共需要投入的减去已经投入的就是还需要投入的
+		change += coin # 这里用来统计用户总共投入的多少
+		print(f&quot;Amount Due: {amount_due}&quot;)
+	else: # 如果用户投入的硬币不符合要求，重新提示可乐价格
+		print(&quot;Amount Due: 50&quot;)
+</code></pre>
+<h3>付费结束之后</h3>
+<p>付费结束之后，有可能刚好投入了 50 美分，但也有可能客户给多了，需要给用户找零，代码如下：</p>
+<pre><code class="language-python"># 还需要付费金额小于等于0，即付够钱了
+# 仍需付费金额的绝对值，即为需要找零的钱
+if amount_due &lt;= 0:
+	print(f&quot;Change Owed: {abs(amount_due)}&quot;)
+</code></pre>
+<h2>完整代码</h2>
+<p>把以上代码优化一下，当 coke.py 当作脚本运行是可以处罚，但是当 import 到其他 Python 文件中则不会触发：</p>
+<pre><code class="language-python">def coke():
+	amount_due = 50
+	change = 0
+	coin_list = [5, 10, 25]
+	print(f&quot;Amount Due: {amount_due}&quot;)
+
+	while amount_due &gt; 0:
+		coin = input(&quot;Insert a coin (25, 10, or 5): &quot;)
+		try:
+			coin = int(coin)
+		except ValueError:
+			print(&quot;Invalid coin&quot;)
+			continue
+
+		if coin in coin_list:
+			amount_due -= coin
+			change += coin
+			print(f&quot;Amount Due: {amount_due}&quot;)
+		else:
+			print(&quot;Amount Due: 50&quot;)
+
+	if amount_due &lt;= 0:
+		print(f&quot;Change Owed: {abs(amount_due)}&quot;)
+
+if __name__ == &quot;__main__&quot;:
+	coke()
+</code></pre>
+<p>重写一遍才发现，<code>change</code>这个变量好像根本没用。</p>
+<p>本来是想记录一下用户投入了多少美分，然后用总共投入的钱减去可乐的价格，就是需要找零的钱。现在看来这个变量完全可以去掉，从而使代码更加简洁。</p>
+<p>我就不删了，希望之后重看的时候还能发现这个不完美的地方。</p>
+]]></content><link href="https://github.com/geoqiao/gitblog/issues/17" rel="alternate"/><category term="Python"/><published>2023-09-03T13:02:25+00:00</published></entry><entry><id>https://github.com/geoqiao/gitblog/issues/16</id><title>我的第一个完整的机器学习项目-Titanic总结</title><updated>2023-09-03T13:02:51.977060+00:00</updated><content type="html"><![CDATA[<h2>背景</h2>
 <p>最近一直在学习Python，尝试使用Python解决一些工作上的问题。这里记录参加这次比赛的心得总结，并会给出我的<a href="https://github.com/geoqiao/Python_DA_100_day/blob/main/kaggle_competition/titanic.py">代码示例(rank：top16%)</a></p>
 <p>Titanic是一个机器学习的入门级分类问题的比赛，数据集记录了titanic乘客的一些信息如性别、票价、船舱等级等信息。数据集被分成train_data 和 test_data两部分。参赛者需要根据train_data的数据信息，利用模型对数据集进行学习，并且预测test_data中乘客是否最终幸存。</p>
 <p>titanic数据集的优势是：</p>
@@ -49,7 +129,7 @@ b.快且效果好，相对与其他模型需要适当调整参数来说，xgboos
 <li>Python基础：写干净的代码真的很重要，比如这个代码示例，第二次看我已经优点头疼了，函数为什么要那么定义。</li>
 <li>写一篇机器学习相关概念的解释blog，例如：kmeans、SVM、随机森林、决策数、XGBoost、</li>
 </ol>
-]]></content><link href="https://github.com/geoqiao/gitblog/issues/16" rel="alternate"/><category term="Python"/><category term="Data analysis"/><category term="Machine Learning"/><published>2023-08-31T13:47:47+00:00</published></entry><entry><id>https://github.com/geoqiao/gitblog/issues/15</id><title>重器轻用-Obsidian</title><updated>2023-08-31T13:48:20.463885+00:00</updated><content type="html"><![CDATA[<h2>什么是 Obsidian</h2>
+]]></content><link href="https://github.com/geoqiao/gitblog/issues/16" rel="alternate"/><category term="Python"/><category term="Data analysis"/><category term="Machine Learning"/><published>2023-08-31T13:47:47+00:00</published></entry><entry><id>https://github.com/geoqiao/gitblog/issues/15</id><title>重器轻用-Obsidian</title><updated>2023-09-03T13:02:52.068568+00:00</updated><content type="html"><![CDATA[<h2>什么是 Obsidian</h2>
 <p>Obsidian 是一个个人知识管理和笔记应用程序，它使用<strong>Markdown</strong>语法来编写和格式化笔记，帮助用户组织、链接和探索知识。它支持<strong>双向链接</strong>、标签、搜索和<strong>插件扩展</strong>，并且完全本地化存储，让用户轻松构建和管理一个互相关联的知识网络。</p>
 <p>总结下来三个优点：</p>
 <ol>
@@ -83,7 +163,7 @@ b.快且效果好，相对与其他模型需要适当调整参数来说，xgboos
 <p>我认为最重要的是：精力集中在<strong>使用工具</strong>，而不是<strong>如何使用工具</strong>上。</p>
 <p>对比 Notion，想用得好，自己又得做产品经理，又得做开发，搞一个模板可能没用几次可能就有新场景需要满足，又要优化模板，最后成长的架构思维和设计能力，这是我不想从一个<strong>知识管理</strong>软件上体验到的。</p>
 <p>Obsidian 给了我一个可以重器轻用的选择，这非常重要。</p>
-]]></content><link href="https://github.com/geoqiao/gitblog/issues/15" rel="alternate"/><category term="macOS"/><published>2023-08-19T07:57:20+00:00</published></entry><entry><id>https://github.com/geoqiao/gitblog/issues/14</id><title>Python环境安装-Anaconda为例</title><updated>2023-08-31T13:48:20.604452+00:00</updated><content type="html"><![CDATA[<p>学习 Python 第一步就是需要安装一个 Python 环境，这可劝退了大部分人。</p>
+]]></content><link href="https://github.com/geoqiao/gitblog/issues/15" rel="alternate"/><category term="macOS"/><published>2023-08-19T07:57:20+00:00</published></entry><entry><id>https://github.com/geoqiao/gitblog/issues/14</id><title>Python环境安装-Anaconda为例</title><updated>2023-09-03T13:02:52.161837+00:00</updated><content type="html"><![CDATA[<p>学习 Python 第一步就是需要安装一个 Python 环境，这可劝退了大部分人。</p>
 <h2>安装 Python 环境的几种传统方式</h2>
 <ol>
 <li>系统自带，直接用系统的。比如 macOS 一般自带 Python3。</li>
@@ -119,7 +199,7 @@ b.快且效果好，相对与其他模型需要适当调整参数来说，xgboos
 <h2>总结</h2>
 <p>以上就是全部内容，其实跟标题相关的就四五行。具体安装教程没有写，是因为真的和小时候下载安装游戏的流程一模一样。</p>
 <p>如果过程中碰到什么问题，可以及时 Google 搜索。当然，如果你愿意的话，可以直接在这个 issue 下面评论，我会尽快回复的。</p>
-]]></content><link href="https://github.com/geoqiao/gitblog/issues/14" rel="alternate"/><category term="Top"/><category term="Python"/><published>2023-07-30T11:09:46+00:00</published></entry><entry><id>https://github.com/geoqiao/gitblog/issues/13</id><title>From English Import Python</title><updated>2023-08-31T13:48:20.733275+00:00</updated><content type="html"><![CDATA[<h2>关于我</h2>
+]]></content><link href="https://github.com/geoqiao/gitblog/issues/14" rel="alternate"/><category term="Top"/><category term="Python"/><published>2023-07-30T11:09:46+00:00</published></entry><entry><id>https://github.com/geoqiao/gitblog/issues/13</id><title>From English Import Python</title><updated>2023-09-03T13:02:52.248776+00:00</updated><content type="html"><![CDATA[<h2>关于我</h2>
 <p>我是一个很普通的人，大学在普通二本商科专业。</p>
 <p>刚毕业的时候vlookup都不会，到熟练excel；后来自己学了SQL，从杂乱的底表自己捞数，最后自己一个人维护自己业务线的数据库视图层（当然工资没有涨，只是事情变多了）</p>
 <p>半年多前，发现日常工作仍然有好多东西并不是能从数据库来的，SQL 和 Tableau 并不能解决全部问题。</p>
@@ -159,7 +239,7 @@ b.快且效果好，相对与其他模型需要适当调整参数来说，xgboos
 <p>最好的学习不是一开始就能学会很难的东西，而是从简单的看起，一步一步持续进步。</p>
 <p>如果一个人跟小白讲怎么开始自学机器学习，一开口就各种算法怎么牛逼，那我建议尽早结束谈话。他这么讲只有两个可能，要么他很无知在吹牛逼，要么他不是一个很好的老师。</p>
 <p>建立自信是极为重要的，武侠小说的主人公，都是从打败恶势力的一个小兵开始的，要是一开始碰见大 boss，那早就完蛋了。</p>
-]]></content><link href="https://github.com/geoqiao/gitblog/issues/13" rel="alternate"/><category term="Top"/><category term="Python"/><category term="Data analysis"/><published>2023-07-29T09:58:20+00:00</published></entry><entry><id>https://github.com/geoqiao/gitblog/issues/12</id><title>Shottr- 原生、轻巧且功能强大的免费macOS截图工具</title><updated>2023-08-31T13:48:20.868535+00:00</updated><content type="html"><![CDATA[<p>| <a href="https://shottr.cc/">Shottr官网</a></p>
+]]></content><link href="https://github.com/geoqiao/gitblog/issues/13" rel="alternate"/><category term="Top"/><category term="Python"/><category term="Data analysis"/><published>2023-07-29T09:58:20+00:00</published></entry><entry><id>https://github.com/geoqiao/gitblog/issues/12</id><title>Shottr- 原生、轻巧且功能强大的免费macOS截图工具</title><updated>2023-09-03T13:02:52.333111+00:00</updated><content type="html"><![CDATA[<p>| <a href="https://shottr.cc/">Shottr官网</a></p>
 <ul>
 <li>
 <p><strong>截图</strong>：不得不说，作为截图工具的基础功能，shottr并没有特别出彩的地方，UI也谈不上漂亮。但是基础的区域截图、顺序标记都有，操作起来也非常直觉。而且在其他同类app中要付费的滚动截图功能也是免费的。</p>
@@ -176,7 +256,7 @@ b.快且效果好，相对与其他模型需要适当调整参数来说，xgboos
 </ul>
 <p>-<strong>贴图</strong>。就是把图片钉在屏幕最上层</p>
 <p>整体体验下来，我认为 shottr非常适合经常需要<strong>对截图进行简单编辑</strong>或者经常使用<strong>OCR功能</strong>的朋友，shottr 能轻松满足你的需求。而且，向开发者邮件反馈issue，开发者回复都非常积极。</p>
-]]></content><link href="https://github.com/geoqiao/gitblog/issues/12" rel="alternate"/><category term="macOS"/><published>2023-07-29T06:28:23+00:00</published></entry><entry><id>https://github.com/geoqiao/gitblog/issues/11</id><title>What's on my Mac</title><updated>2023-08-31T13:48:20.974429+00:00</updated><content type="html"><![CDATA[<p>和大多数人一样，拿到一台MacBook第一件事就是找各种软件，以下是我目前在用的一些。它们的整体使用体验都很不错，且部分软件可以联动形成 workflow ，供大家参考。</p>
+]]></content><link href="https://github.com/geoqiao/gitblog/issues/12" rel="alternate"/><category term="macOS"/><published>2023-07-29T06:28:23+00:00</published></entry><entry><id>https://github.com/geoqiao/gitblog/issues/11</id><title>What's on my Mac</title><updated>2023-09-03T13:02:52.442703+00:00</updated><content type="html"><![CDATA[<p>和大多数人一样，拿到一台MacBook第一件事就是找各种软件，以下是我目前在用的一些。它们的整体使用体验都很不错，且部分软件可以联动形成 workflow ，供大家参考。</p>
 <h2>启动器类- Raycast</h2>
 <p>目前免费的启动器类app，可以启动、替代很多软件。自带的窗口管理功能替代 magnet、rectangle 等等窗口管理软件；自带的文件搜索功能替代了访达；还有一系列提升工作效率的插件。不了解的人可以<a href="https://telegra.ph/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E7%94%A8raycast%E6%9B%BF%E4%BB%A3%E4%BA%86alfred-07-17">参考这里</a>。</p>
 <h2>自动切换输入法- Input Source Pro</h2>
@@ -207,7 +287,7 @@ b.快且效果好，相对与其他模型需要适当调整参数来说，xgboos
 <p>微信、telegram、VSCode、Chrome。。。</p>
 <p>office 被我卸载了，因为想学 pandas，强迫自己用 pandas 读表</p>
 <p>Report content on this page</p>
-]]></content><link href="https://github.com/geoqiao/gitblog/issues/11" rel="alternate"/><category term="macOS"/><published>2023-07-29T06:20:29+00:00</published></entry><entry><id>https://github.com/geoqiao/gitblog/issues/10</id><title>基于 GitHub issues 的个人 blog 搭建</title><updated>2023-08-31T13:48:21.100075+00:00</updated><content type="html"><![CDATA[<h2>背景</h2>
+]]></content><link href="https://github.com/geoqiao/gitblog/issues/11" rel="alternate"/><category term="macOS"/><published>2023-07-29T06:20:29+00:00</published></entry><entry><id>https://github.com/geoqiao/gitblog/issues/10</id><title>基于 GitHub issues 的个人 blog 搭建</title><updated>2023-09-03T13:02:52.523241+00:00</updated><content type="html"><![CDATA[<h2>背景</h2>
 <p>我最近碰到了以下问题：</p>
 <ol>
 <li>偶尔想写点东西，想有一个个人 blog</li>
@@ -233,7 +313,7 @@ b.快且效果好，相对与其他模型需要适当调整参数来说，xgboos
 <img width="1490" alt="action读写权限开启" src="https://github.com/geoqiao/gitblog/assets/105639506/c8efcada-36d7-42f9-aed6-30b78ce3873e">
 <h2>结语</h2>
 <p>以上就是全部内容，非常感谢 @yihong0618 老师的代码。</p>
-]]></content><link href="https://github.com/geoqiao/gitblog/issues/10" rel="alternate"/><category term="Top"/><published>2023-07-18T13:10:40+00:00</published></entry><entry><id>https://github.com/geoqiao/gitblog/issues/9</id><title>总得活着吧？</title><updated>2023-08-31T13:48:21.219070+00:00</updated><content type="html"><![CDATA[<p>世俗价值都是禁不起推敲的，推敲下去觉得活着没意义。  </p>
+]]></content><link href="https://github.com/geoqiao/gitblog/issues/10" rel="alternate"/><category term="Top"/><published>2023-07-18T13:10:40+00:00</published></entry><entry><id>https://github.com/geoqiao/gitblog/issues/9</id><title>总得活着吧？</title><updated>2023-09-03T13:02:52.610426+00:00</updated><content type="html"><![CDATA[<p>世俗价值都是禁不起推敲的，推敲下去觉得活着没意义。  </p>
 <p>你越想意义就越痛苦。所以人们只能有两个选择，肉体自杀和哲学自杀。</p>
 <h2>哲学自杀</h2>
 <p>哲学自杀就是不再想这个问题了，老子选择信仰个宗教，伊斯兰或者马克思，或者世俗主义，或者纯粹享乐比谁啪的多，比谁赚得多…总之信个世俗价值的东西。你可以随便吃饭时候问一下同桌人，生活的意义是啥，别人不是笑你就是说想这干嘛，但他们是无法给出答案的。这就是所谓哲学自杀。人如果不愿放弃，继续思考，结果必然面对找不到意义的尴尬，也就是加缪的名词‘荒谬’，很可能走向虚无。</p>
@@ -246,7 +326,7 @@ b.快且效果好，相对与其他模型需要适当调整参数来说，xgboos
 <h2>知其不可为而为之</h2>
 <p>就比如，生活给了你一巴掌，让你去死；你不仅不能听它的，还得回它一巴掌，再加一句：操！生命的意义就在这句粗口里。</p>
 <p>知道人终有一死，但现在，我选择活。</p>
-]]></content><link href="https://github.com/geoqiao/gitblog/issues/9" rel="alternate"/><category term="胡思乱想"/><published>2023-07-15T14:40:01+00:00</published></entry><entry><id>https://github.com/geoqiao/gitblog/issues/8</id><title>Out of the depth of misfortune comes bliss</title><updated>2023-08-31T13:48:21.338766+00:00</updated><content type="html"><![CDATA[<p>大方无隅</p>
+]]></content><link href="https://github.com/geoqiao/gitblog/issues/9" rel="alternate"/><category term="胡思乱想"/><published>2023-07-15T14:40:01+00:00</published></entry><entry><id>https://github.com/geoqiao/gitblog/issues/8</id><title>Out of the depth of misfortune comes bliss</title><updated>2023-09-03T13:02:52.698403+00:00</updated><content type="html"><![CDATA[<p>大方无隅</p>
 <p>大器晚成</p>
 <p>大音希声</p>
 <p>大象无形</p>
@@ -265,7 +345,7 @@ b.快且效果好，相对与其他模型需要适当调整参数来说，xgboos
 <p>否极泰来</p>
 <p>否极泰来</p>
 <p>否极泰来</p>
-]]></content><link href="https://github.com/geoqiao/gitblog/issues/8" rel="alternate"/><category term="胡思乱想"/><published>2023-07-15T03:34:29+00:00</published></entry><entry><id>https://github.com/geoqiao/gitblog/issues/7</id><title>空调剥削理论的提出</title><updated>2023-08-31T13:48:21.453187+00:00</updated><content type="html"><![CDATA[<h2>两大基本原理</h2>
+]]></content><link href="https://github.com/geoqiao/gitblog/issues/8" rel="alternate"/><category term="胡思乱想"/><published>2023-07-15T03:34:29+00:00</published></entry><entry><id>https://github.com/geoqiao/gitblog/issues/7</id><title>空调剥削理论的提出</title><updated>2023-09-03T13:02:52.784296+00:00</updated><content type="html"><![CDATA[<h2>两大基本原理</h2>
 <p><strong>首先</strong>，在开始阐述空调剥削理论之前，先来了解一下这个理论成立的两大基本原理：</p>
 <p><strong>空调制冷原理</strong>和<strong>能量守恒</strong></p>
 <h3>空调制冷原理</h3>
@@ -298,10 +378,10 @@ b.快且效果好，相对与其他模型需要适当调整参数来说，xgboos
 <h2>这个理论有两层含义：</h2>
 <p><strong>第一层是，技术的进步没能克服43摄氏度的气温，空调没用了。也就是空调作为一个没有生命，没有意识的机器，剥削了包括人类在内的地球全体。</strong></p>
 <p><strong>第二层是，技术的进步克服了43摄氏度的气温，空调依然有作用，但使用成本大大增加。即能够使用空调的少数人类剥削包括用不上空调的其余人类在内的地球全体。</strong></p>
-]]></content><link href="https://github.com/geoqiao/gitblog/issues/7" rel="alternate"/><category term="胡思乱想"/><category term="热"/><published>2023-07-15T03:25:05+00:00</published></entry><entry><id>https://github.com/geoqiao/gitblog/issues/6</id><title>关于历史</title><updated>2023-08-31T13:48:21.584154+00:00</updated><content type="html"><![CDATA[<p>吃饭的时候突然想到，把历史比喻成一个车轮真的是生动形象且具体。</p>
+]]></content><link href="https://github.com/geoqiao/gitblog/issues/7" rel="alternate"/><category term="胡思乱想"/><category term="热"/><published>2023-07-15T03:25:05+00:00</published></entry><entry><id>https://github.com/geoqiao/gitblog/issues/6</id><title>关于历史</title><updated>2023-09-03T13:02:52.882098+00:00</updated><content type="html"><![CDATA[<p>吃饭的时候突然想到，把历史比喻成一个车轮真的是生动形象且具体。</p>
 <p>在某种角度上来看，这个车轮一直在向前滚动；另一种种角度上，车轮又在不断循环，车轮的材质变化，滚动的速度也不一样。</p>
 <p>一些东西一直再改变，但一些东西一直没变。</p>
-]]></content><link href="https://github.com/geoqiao/gitblog/issues/6" rel="alternate"/><category term="胡思乱想"/><published>2023-07-15T03:17:05+00:00</published></entry><entry><id>https://github.com/geoqiao/gitblog/issues/5</id><title>with_sql _as_english</title><updated>2023-08-31T13:48:21.701426+00:00</updated><content type="html"><![CDATA[<h2>描述</h2>
+]]></content><link href="https://github.com/geoqiao/gitblog/issues/6" rel="alternate"/><category term="胡思乱想"/><published>2023-07-15T03:17:05+00:00</published></entry><entry><id>https://github.com/geoqiao/gitblog/issues/5</id><title>with_sql _as_english</title><updated>2023-09-03T13:02:52.955330+00:00</updated><content type="html"><![CDATA[<h2>描述</h2>
 <ol>
 <li>分享自己学习 SQL 的经验。</li>
 <li><code>WITH 临时表名 AS 子查询</code> 是 SQL 中一个常用的语法，这篇分享会介绍这个语法。</li>
@@ -323,7 +403,7 @@ ON table1.id = table2.id
 WHERE table1.column1 = &#x27;1&#x27;
 </code></pre>
 <p>在这个示例中，<code>table1</code>  和  <code>table2</code>  是两个不同的表，我们在 <code>table1</code> 中写了一个 <code>vlookup</code> ，这个公式以两张表中的 <code>id</code> 字段为条件关联，把 <code>table2</code>  中的 <code>name</code> 字段匹配到了 <code>table1</code> ，并且匹配完成后进行了一个筛选，只选择 <code>table1</code> 中 <code>column1</code> 字段为 <code>&#x27;1&#x27;</code> 的行。</p>
-]]></content><link href="https://github.com/geoqiao/gitblog/issues/5" rel="alternate"/><category term="Data analysis"/><category term="SQL"/><published>2023-07-15T03:09:11+00:00</published></entry><entry><id>https://github.com/geoqiao/gitblog/issues/4</id><title>excel 学习经验分享</title><updated>2023-08-31T13:48:21.824861+00:00</updated><content type="html"><![CDATA[<h2>描述</h2>
+]]></content><link href="https://github.com/geoqiao/gitblog/issues/5" rel="alternate"/><category term="Data analysis"/><category term="SQL"/><published>2023-07-15T03:09:11+00:00</published></entry><entry><id>https://github.com/geoqiao/gitblog/issues/4</id><title>excel 学习经验分享</title><updated>2023-09-03T13:02:53.041202+00:00</updated><content type="html"><![CDATA[<h2>描述</h2>
 <ol>
 <li>
 <p>这是一个分享个人 excel 经验的文档。</p>
