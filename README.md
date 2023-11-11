@@ -7,11 +7,11 @@ My personal blog using issues and GitHub Actions.
 - [From English Import Python](https://github.com/geoqiao/gitblog/issues/13)--2023-07-29
 - [基于 GitHub issues 的个人 blog 搭建](https://github.com/geoqiao/gitblog/issues/10)--2023-07-18
 ## 最近更新
+- [App Defaults 2023](https://github.com/geoqiao/gitblog/issues/20)--2023-11-11
 - [Vim？ Don't be afraid ！](https://github.com/geoqiao/gitblog/issues/19)--2023-10-22
 - [总有一些 app 只能 Windows 用](https://github.com/geoqiao/gitblog/issues/18)--2023-09-24
 - [Coke Machine Challenge ](https://github.com/geoqiao/gitblog/issues/17)--2023-09-03
 - [我的第一个完整的机器学习项目-Titanic总结](https://github.com/geoqiao/gitblog/issues/16)--2023-08-31
-- [重器轻用-Obsidian](https://github.com/geoqiao/gitblog/issues/15)--2023-08-19
 ## Data analysis
 - [我的第一个完整的机器学习项目-Titanic总结](https://github.com/geoqiao/gitblog/issues/16)--2023-08-31
 - [From English Import Python](https://github.com/geoqiao/gitblog/issues/13)--2023-07-29
@@ -29,6 +29,7 @@ My personal blog using issues and GitHub Actions.
 ## excel
 - [excel 学习经验分享](https://github.com/geoqiao/gitblog/issues/4)--2023-07-15
 ## macOS
+- [App Defaults 2023](https://github.com/geoqiao/gitblog/issues/20)--2023-11-11
 - [总有一些 app 只能 Windows 用](https://github.com/geoqiao/gitblog/issues/18)--2023-09-24
 - [重器轻用-Obsidian](https://github.com/geoqiao/gitblog/issues/15)--2023-08-19
 - [Shottr- 原生、轻巧且功能强大的免费macOS截图工具](https://github.com/geoqiao/gitblog/issues/12)--2023-07-29
