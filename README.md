@@ -7,7 +7,7 @@ My personal blog using issues and GitHub Actions.
 - [From English Import Python](https://github.com/geoqiao/gitblog/issues/13)--2023-07-29
 - [基于 GitHub issues 的个人 blog 搭建](https://github.com/geoqiao/gitblog/issues/10)--2023-07-18
 ## 最近更新
-- [Conda VS Rye：我为什么最后选择 Rye](https://github.com/geoqiao/gitblog/issues/22)--2024-01-06
+- [rye - 好用的Python包管理工具](https://github.com/geoqiao/gitblog/issues/22)--2024-01-06
 - [Python编辑器-我的VSCode配置](https://github.com/geoqiao/gitblog/issues/21)--2023-12-10
 - [App Defaults 2023](https://github.com/geoqiao/gitblog/issues/20)--2023-11-11
 - [Vim？ Don't be afraid ！](https://github.com/geoqiao/gitblog/issues/19)--2023-10-22
@@ -20,7 +20,7 @@ My personal blog using issues and GitHub Actions.
 ## Machine Learning
 - [我的第一个完整的机器学习项目-Titanic总结](https://github.com/geoqiao/gitblog/issues/16)--2023-08-31
 ## Python
-- [Conda VS Rye：我为什么最后选择 Rye](https://github.com/geoqiao/gitblog/issues/22)--2024-01-06
+- [rye - 好用的Python包管理工具](https://github.com/geoqiao/gitblog/issues/22)--2024-01-06
 - [Python编辑器-我的VSCode配置](https://github.com/geoqiao/gitblog/issues/21)--2023-12-10
 - [Coke Machine Challenge ](https://github.com/geoqiao/gitblog/issues/17)--2023-09-03
 - [我的第一个完整的机器学习项目-Titanic总结](https://github.com/geoqiao/gitblog/issues/16)--2023-08-31
