@@ -3,8 +3,8 @@ My personal blog using issues and GitHub Actions.
 [RSS Feed](https://raw.githubusercontent.com/geoqiao/gitblog/master/feed.xml)
 
 ## 置顶文章
+- [rye - 好用的Python包管理工具](https://github.com/geoqiao/gitblog/issues/22)--2024-01-06
 - [Python环境安装-Anaconda为例](https://github.com/geoqiao/gitblog/issues/14)--2023-07-30
-- [From English Import Python](https://github.com/geoqiao/gitblog/issues/13)--2023-07-29
 - [基于 GitHub issues 的个人 blog 搭建](https://github.com/geoqiao/gitblog/issues/10)--2023-07-18
 ## 最近更新
 - [rye - 好用的Python包管理工具](https://github.com/geoqiao/gitblog/issues/22)--2024-01-06
