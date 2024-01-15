@@ -23,7 +23,7 @@
 > To install run you can curl a command which will install the right binary for your operating system and CPU architecture and install it:
 >
 > ````shell
-> curl -sSf https://rye-up.com/get | bash```
+> curl -sSf https://rye-up.com/get | bash
 > ````
 
 **补充**：
